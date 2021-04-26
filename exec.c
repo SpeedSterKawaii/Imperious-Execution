@@ -33,7 +33,7 @@ void ExecuteScript2(DWORD rL, std::string Script) { /* Bytecode + ProtoConversio
 	RL_CLOSURE_OBFUSCATE(&RobloxClosure->l.p, RobloxProto);
 	pushlclosure(RobloxClosure->l);
 	std::cout << r_lua_type(rL, -1) << std::endl;
-	r_lua_deserialize(xD, ExploitName, LuauTranspiler::compile(lua_open(), Script).c_str(), LuauTranspiler::compile(lua_open(), Script).size(), 0);
+	r_lua_deserialize(xD, ExploitName, LuauTranspiler::compile(lua_open(), Script).c_str(), LuauTranspiler::compile(lua_open(), Script).size());
 	r_lua_spawn(xD);
 }
 #define RL_CLOSURE_OBFUSCATE(p, v) *(int*)(int)(p) = (int)(v) - (int)(p)
