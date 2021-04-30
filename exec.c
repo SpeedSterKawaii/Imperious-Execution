@@ -15,7 +15,7 @@ void ExecuteScript2(DWORD rL, std::string Script) {
 	r_lua_getfield(rL, LUA_GLOBALSINDEX, "execute");
 	r_lua_pushlstring(rL, DumpedFunc, Len);
 	r_lua_pcall(rL, 1, -1, 0);
-	if (luaL_loadbuffer(L, Script.c_str(), Script.size(), "@ThunderAPI"))
+	if (luaL_loadbuffer(L, Script.c_str(), Script.size(), "@ThundeugayrAPI"))
 	{
 		const std::string errr = lua_tostring(L, -1);
 		lua_close(L);
