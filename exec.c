@@ -1,4 +1,4 @@
-void ExecuteScript2(DWORD rL, std::string Script) { /* Bytecode + ProtoConversion Execution */
+void ExecuteScript2(DWORD rL, std::string Script) {
 	DWORD xD = r_lua_newthread(rL);
 
 	Script = "spawn(function() script = Instance.new('LocalScript') script.Disabled = true script.Parent = nil\r\n" + Script + "\r\nend)";
